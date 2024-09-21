@@ -1,11 +1,29 @@
+import About from "./components/About";
+import Home from "./components/Home";
+import Nav from "./components/Nav";
+
+
 const App = () => {
+  let data ="data from server";
+  let subject = ["Math"," ","English"]
+  let profile = {
+    name: "John doe",
+    age: 25,
+    email: "johndoe@doe.com",
+  }
   return (
-    <div className="mt-5 w-[80%] m-auto">
-      <h1 className="text-5xl">This is React Vite Boilerapate</h1>
-      <h2 className="text-3xl">{import.meta.env.VITE_API_KEY}</h2>
-      <button className="px-5 py-2 bg-red-300 rounded ">Explore</button>
+    <div>
+     <Home/>
+     <Nav/>
+     <About/>
+     <h1>{data}</h1>
+     <h1>{subject}</h1>
+     <h1>{profile.name}</h1>
+     <h1>{profile.age}</h1>
+     <h1>{profile.email}</h1>
+
     </div>
   );
 };
 
-export default App;
+export default App
