@@ -1,24 +1,26 @@
+import { useState } from "react"
 
 
 const App = () => {
-  let users =[
-    {
-      name: "john doe",
-      age: 35
-    },
-    {
-      name: "siddhant",
-      age: 45
 
-    }
-  ]
-  let hah = users.map((u,i)=> <h1 key={i}>{u.name}</h1> )
- 
+ const [username,setUsername] = useState("ha")
+
+
+
+  const info = () =>{
+    console.log("Hellow")
+
+  }
+
+  const takeInfo = () =>{
+    console.log("hii")
+  }
   return (
     <div>
-
-        {hah}
-        
+<h1>{info()}</h1>
+<button onClick={takeInfo()} > hey </button>
+<h1>{username}</h1>
+      <button onClick={()=> setUsername("pop")}>Help</button>
     </div>
   )
 }
