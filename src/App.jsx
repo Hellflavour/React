@@ -1,27 +1,17 @@
-import { useState } from "react"
 
+import { useState } from "react";
 
 const App = () => {
+  const [time ,settime] = useState(new Date().toLocaleTimeString());
 
- const [username,setUsername] = useState("ha")
+  setInterval(() => {
+    settime(new Date(). toLocaleTimeString())
+    
+  }, 1000);
 
-
-
-  const info = () =>{
-    console.log("Hellow")
-
-  }
-
-  const takeInfo = () =>{
-    console.log("hii")
-  }
+  
   return (
-    <div>
-<h1>{info()}</h1>
-<button onClick={takeInfo()} > hey </button>
-<h1>{username}</h1>
-      <button onClick={()=> setUsername("pop")}>Help</button>
-    </div>
+    <div><h1>{time}</h1></div>
   )
 }
 
