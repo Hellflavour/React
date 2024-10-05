@@ -1,9 +1,9 @@
-import Container from "./components/Container"
 
-export const App = () => {
+
+const App = () => {
   return (
-    <Container>
-      <h1>Hii</h1>
-    </Container>
+    <div><h1 style={{fontSize:"100px"}}>hi</h1></div>
   )
 }
+
+export default App
